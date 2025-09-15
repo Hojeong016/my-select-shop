@@ -15,4 +15,7 @@ logging:
   level:
     com.zaxxer.hikari: DEBUG
 
+api:
+  client-id: ${CLIENT_ID}
+  client-secret: ${CLIENT_SECRET}
 
