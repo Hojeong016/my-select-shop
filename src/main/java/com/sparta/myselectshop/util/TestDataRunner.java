@@ -1,3 +1,4 @@
+/*
 package com.sparta.myselectshop.util;
 
 import com.sparta.myselectshop.entity.Product;
@@ -84,4 +85,4 @@ public class TestDataRunner implements ApplicationRunner {
     public int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
-}
+}*/
