@@ -4,6 +4,7 @@ let folderTargetId;
 
 $(document).ready(function () {
     const auth = getToken();
+
     if (auth !== undefined && auth !== '') {
         $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
             jqXHR.setRequestHeader('Authorization', auth);
@@ -293,9 +294,9 @@ function addFolder() {
         alert('성공적으로 등록되었습니다.');
         window.location.reload();
     })
-      /*  .fail(function(xhr, textStatus, errorThrown) {
+        .fail(function(xhr, textStatus, errorThrown) {
             alert("중복된 폴더입니다.");
-        });*/
+        });
 }
 
 function addProductItem(product) {
@@ -427,10 +428,16 @@ function logout() {
 }
 
 function getToken() {
+
     let auth = Cookies.get('Authorization');
 
     if(auth === undefined) {
         return '';
+    }
+
+    // kakao 로그인 사용한 경우 Bearer 추가
+    if(auth.indexOf('Bearer') === -1 && auth !== ''){
+        auth = 'Bearer ' + auth;
     }
 
     return auth;

@@ -117,6 +117,7 @@ public class ProductService {
         // 4) 상품에 폴더를 추가합니다.
         productFolderRepository.save(new ProductFolder(product, folder));
     }
+
     @Transactional(readOnly = true)
     public Page<ProductResponseDto> getProductsInFolder(Long folderId, int page, int size, String sortBy, boolean isAsc, User user) {
 
