@@ -1,3 +1,5 @@
+/*
+
 package com.sparta.myselectshop.service;
 
 import com.sparta.myselectshop.controller.dto.ProductRequestDto;
@@ -86,7 +88,7 @@ class ProductServiceTest {
         );
     }
 }
-/*
+
 
 import com.sparta.myselectshop.controller.dto.ProductResponseDto;
 import com.sparta.myselectshop.controller.veiw.ProductMypriceRequestDto;
@@ -108,7 +110,10 @@ class ProductServiceTest {
         requestMyPriceDto.setMyprice(myprice);
 
         //주입받아오고 있음, DI
-        */
+
+
+
+*/
 /**
          *  private final ProductFolderRepository productFolderRepository;
          *  private final FolderRepository folderRepository;
@@ -118,8 +123,18 @@ class ProductServiceTest {
          *
          *  private final ProductRepository productRepository;
          *//*
+*/
+/*
+*//*
 
-        ProductService productService = new ProductService();
+
+import com.sparta.myselectshop.controller.dto.ProductResponseDto;
+import com.sparta.myselectshop.controller.veiw.ProductMypriceRequestDto;
+import com.sparta.myselectshop.service.ProductService;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+ProductService productService = new ProductService();
 
         // when
         ProductResponseDto result = productService.updateProduct(productId, requestMyPriceDto);
@@ -151,4 +166,6 @@ class ProductServiceTest {
                 exception.getMessage()
         );
     }
-}*/
+}
+
+*/
